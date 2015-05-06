@@ -18,7 +18,7 @@
         public List<int> Values
         {
             get { return this.values; }
-            set {}
+            set { }
         }
     }
 }

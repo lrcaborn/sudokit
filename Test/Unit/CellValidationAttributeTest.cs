@@ -1,6 +1,7 @@
 ﻿namespace Lrc.Sudokit
 {
     using System;
+    using System.ComponentModel.DataAnnotations;
     using Lrc.Sudokit;
     using Microsoft.VisualStudio.TestTools.UnitTesting;
     
@@ -11,9 +12,8 @@
         [Owner("LRC")]
         public void CanInstantiateCellValidationAttribute_Default()
         {
-            var board = new Board();
-            Assert.IsInstanceOfType(board, typeof(Board));
+            var cellValidationAttribute = new CellValidationAttribute();
+            Assert.IsInstanceOfType(cellValidationAttribute, typeof(CellValidationAttribute));
         }
-
     }
 }

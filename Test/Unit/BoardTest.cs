@@ -63,7 +63,7 @@
             var board = new Board();
             int testValue = Cell.MaxValue + 1;
             int testPosition = 3;
-            Assert.IsTrue(board.PopulateByPosition(testValue, testPosition));
+            Assert.IsFalse(board.PopulateByPosition(testValue, testPosition));
         }
     }
 }

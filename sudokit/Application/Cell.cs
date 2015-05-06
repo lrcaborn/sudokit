@@ -1,14 +1,24 @@
-﻿using System;
-
-namespace lrc.sudokit
+﻿namespace Lrc.Sudokit
 {
+    using System;
+    using System.Collections.Generic;
+    
     public class Cell
     {
-        public Byte[] Values;
+        public const int MinValue = 1;
+        public const int MaxValue = 9;
 
-        public Cell(){
-            Values = new Byte[] {1,2,3,4,5,6,7,8,9};
-    }
-    
+        private List<int> values;
+
+        public Cell()
+        {
+            this.values = new List<int>();
+        }
+
+        public List<int> Values
+        {
+            get { return this.values; }
+            set {}
+        }
     }
 }

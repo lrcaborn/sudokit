@@ -1,15 +1,15 @@
-﻿using System;
-using lrc.sudokit;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
-
-namespace lrc.sudokit
+﻿namespace Lrc.Sudokit
 {
+    using System;
+    using Lrc.Sudokit;
+    using Microsoft.VisualStudio.TestTools.UnitTesting;
+
     [TestClass]
     public class CellTest
     {
         [TestMethod]
         [Owner("LRC")]
-        public void CanInstantiate()
+        public void CanInstantiateCell_Default()
         {
             var cell = new Cell();
             Assert.IsInstanceOfType(cell, typeof(Cell));
@@ -17,11 +17,18 @@ namespace lrc.sudokit
 
         [TestMethod]
         [Owner("LRC")]
-        public void ValuesEmptyWhenInstantiated()
+        public void ValuesListNotNullAfterInstantiation()
         {
             var cell = new Cell();
-            Assert.IsTrue(cell.Values.Length == 9);
+            Assert.IsNotNull(cell.Values);
         }
 
+        [TestMethod]
+        [Owner("LRC")]
+        public void ValuesListEmptyAfterInstantiation()
+        {
+            var cell = new Cell();
+            Assert.AreEqual(0, cell.Values.Count);
+        }
     }
 }

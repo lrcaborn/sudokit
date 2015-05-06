@@ -2,6 +2,9 @@
 {
     using System;
     using System.Collections.Generic;
+    using System.ComponentModel.DataAnnotations;
+
+    using Lrc.Sudokit.Validations;
     
     public class Cell
     {
@@ -15,6 +18,8 @@
             this.values = new List<int>();
         }
 
+        [Range(Cell.MinValue, Cell.MaxValue, ErrorMessage = "Cell value must be between 1 and 9.")]
+        [CellValidation]
         public List<int> Values
         {
             get { return this.values; }

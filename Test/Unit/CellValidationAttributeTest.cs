@@ -1,7 +1,8 @@
-﻿namespace Lrc.Sudokit
+﻿namespace Lrc.Sudokit.Validations
 {
     using System;
     using System.ComponentModel.DataAnnotations;
+    
     using Lrc.Sudokit;
     using Microsoft.VisualStudio.TestTools.UnitTesting;
     

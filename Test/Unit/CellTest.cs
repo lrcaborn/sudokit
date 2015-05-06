@@ -1,6 +1,7 @@
 ﻿namespace Lrc.Sudokit
 {
     using System;
+
     using Lrc.Sudokit;
     using Microsoft.VisualStudio.TestTools.UnitTesting;
 

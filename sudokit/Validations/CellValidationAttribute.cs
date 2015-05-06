@@ -1,4 +1,4 @@
-﻿namespace Lrc.Sudokit
+﻿namespace Lrc.Sudokit.Validations
 {
     using System;
     using System.Collections.Generic;

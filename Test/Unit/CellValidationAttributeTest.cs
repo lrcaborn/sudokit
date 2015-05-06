@@ -15,5 +15,29 @@
             var cellValidationAttribute = new CellValidationAttribute();
             Assert.IsInstanceOfType(cellValidationAttribute, typeof(CellValidationAttribute));
         }
+
+        [TestMethod]
+        [Owner("LRC")]
+        public void CellValidationAttributePassesAllowedValue()
+        {
+            var cellValidationAttribute = new CellValidationAttribute();
+            Assert.IsTrue(cellValidationAttribute.IsValid(5));
+        }
+
+        [TestMethod]
+        [Owner("LRC")]
+        public void CellValidationAttributeFailsValueBelowMinimum()
+        {
+            var cellValidationAttribute = new CellValidationAttribute();
+            Assert.IsFalse(cellValidationAttribute.IsValid(-1));
+        }
+
+        [TestMethod]
+        [Owner("LRC")]
+        public void CellValidationAttributeFailsValueAboveMaximum()
+        {
+            var cellValidationAttribute = new CellValidationAttribute();
+            Assert.IsFalse(cellValidationAttribute.IsValid(16));
+        }
     }
 }
